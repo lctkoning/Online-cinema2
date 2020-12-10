@@ -330,11 +330,6 @@
 		</plugins>
 	</build>
 	 <distributionManagement>
-	 	<repository>
-		 	<id>deployment</id>
-			<name>Internal Releases </name>
-			<url> http://localhost:8081/repository/Testrepo-REL/ </url>
-		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Snapshot Releases</name>
