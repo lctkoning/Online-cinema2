@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Ok') {
+            steps {
+                echo "Ok"
+            }
+        }
+        stage('Email') {
+            steps {
+                emailext body: 'Your build has is succesfull :)', subject: 'Testing', to: 'lex.koning@devoteam.com'
+            }
+        }
+    }
+}
