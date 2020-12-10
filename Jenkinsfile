@@ -19,7 +19,7 @@ pipeline {
         }
         stage('deploy in runtime') {
             steps {
-               echo 'Succesfull'
+               echo 'mvn deploy'
             }
         }
     }
