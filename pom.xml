@@ -339,7 +339,7 @@
 			<id>deployment</id>
 			<name>Internal Snapshot Releases</name>
 			<url>http://localhost:8081/repository/Testrepo/</url>
-		</snapshotRepository
+		</snapshotRepository>
 	 </distributionManagement>
 
 </project>
