@@ -19,7 +19,7 @@ pipeline {
         }
         stage('deploy in runtime') {
             steps {
-               echo 'mvn deploy'
+               sh 'mvn deploy'
             }
         }
     }
