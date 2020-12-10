@@ -17,9 +17,9 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('deploy in runtime') {
+        stage('deploy in nexus) {
             steps {
-               sh 'mvn deploy'
+               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: 'target/cinema-0.0.1-SNAPSHOT.war', type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://localhost:8081/repository/maven-snapshots/', version: '0.0.1-SNAPSHOT'
             }
         }
     }
