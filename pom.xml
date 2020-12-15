@@ -333,7 +333,7 @@
 		<snapshotRepository>
 			<id>deployment</id>
 			<name>Internal Snapshot Releases</name>
-			<url>http://localhost:8081/repository/Testrepo/</url>
+			<url>http://192.168.2.21:8081/repository/Testrepo/</url>
 		</snapshotRepository>
 	 </distributionManagement>
 
