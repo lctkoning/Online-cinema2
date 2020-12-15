@@ -12,9 +12,9 @@ pipeline {
                 sh 'mvn install'
             }
         }
-        stage('Test maven') {
+        stage('Test clean package') {
             steps {
-                sh 'mvn test'
+                sh 'mvn clean package'
             }
         }
         stage('deploy in nexus') {
