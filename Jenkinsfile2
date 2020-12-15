@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        maven : 'Maven3'
+     }
     stages {
         stage('Clone github') {
             steps {
@@ -15,7 +17,10 @@ pipeline {
         }
         stage('deploy in nexus') {
             steps {
-               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: 'target/cinema-0.0.1-SNAPSHOT.war', type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: '192.168.2.21:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'Testrepo-REL', version: '0.0.1'
+                script {
+                def MavenPom = readMavenPomfile : 'pom.xml'
+                def Nexusrepo = MavenPom.version.endsWith("SNAPSHOT") ? "Testrepo" : "Testrepo-REL" }
+               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: 'target/cinema-0.0.1-SNAPSHOT.war', type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: '192.168.2.21:8081', nexusVersion: 'nexus3', protocol: 'http', repository: Nexusrepo, version: "${mavenPom.version}
             }
         }
     }
