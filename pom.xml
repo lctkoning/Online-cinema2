@@ -329,12 +329,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	 <distributionManagement>
-		<snapshotRepository>
-			<id>deployment</id>
-			<name>Internal Snapshot Releases</name>
-			<url>http://192.168.2.21:8081/repository/Testrepo/</url>
-		</snapshotRepository>
-	 </distributionManagement>
+	 
 
 </project>
