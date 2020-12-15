@@ -19,7 +19,7 @@ pipeline {
         }
         stage('deploy in nexus') {
             steps {
-               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: 'target/cinema-0.0.1-SNAPSHOT.war', type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: 'http://145.53.199.131:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://localhost:8081/repository/maven-snapshots/', version: '0.0.1-SNAPSHOT'
+               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: 'target/cinema-0.0.1-SNAPSHOT.war', type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: '145.53.199.131:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'http://145.53.199.131:8081/repository/maven-snapshots/', version: '0.0.1-SNAPSHOT'
             }
         }
     }
