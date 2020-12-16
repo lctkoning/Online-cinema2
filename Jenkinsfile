@@ -24,16 +24,7 @@ pipeline {
         }
         stage('Update snapshot version') {
             steps {
-              sh  'mvn release:update-versions'
-            }
-        }
-        stage('Transform into release version') {
-            steps {
-                script {
-                def pom = readMavenPom file: 'pom.xml'
-                def pomVersion = pom.getVersion().replace("-SNAPSHOT", "")
-                pomVersion()
-                }
+              sh  'mvn release:prepare'
             }
         }
         stage('Upload to release repository') {
