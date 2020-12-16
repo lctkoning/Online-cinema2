@@ -32,7 +32,13 @@ pipeline {
                 script {
                 def pom = readMavenPom file: 'pom.xml'
                 def pomVersion = pom.getVersion().replace("-SNAPSHOT", "")
+                Pomversion
                 }
+            }
+        }
+        stage('Upload to release repository') {
+            steps {
+                sh 'mvn clean deploy'
             }
         }
             
