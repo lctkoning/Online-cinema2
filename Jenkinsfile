@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Download from snapshot') {
             steps {
-                sh 'mvn dependency:get -DremoteRepositories=http://192.168.2.21:8081/repository/Testrepo/ -DgroupId=org.springframework.samples.service.service -DartifactId=cinema -Dversion=LATEST -Dtransitive=false'
+                sh 'mvn dependency:get -DremoteRepositories=http://192.168.2.21:8081/repository/Testrepo/ -DgroupId=org.springframework.samples.service.service -DartifactId=cinema -Dversion=LATEST -Dpackaging=war -Dtransitive=false'
             }
         }
             
