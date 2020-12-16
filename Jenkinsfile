@@ -4,35 +4,23 @@ pipeline {
     
     stages {
         
-        stage('Test clean package') {
+        stage('release prepare') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn release:prepare'
             }
         }
-        stage('deploy in nexus') {
+        stage('release perform') {
             steps {
-            sh 'mvn clean deploy'
+            sh 'mvn release:perform'
           
             }
                 
         }
-        stage('Download from snapshot') {
+        stage('clean up') {
             steps {
-                sh 'mvn dependency:get -DremoteRepositories=http://192.168.2.21:8081/repository/Testrepo/ -DgroupId=org.springframework.samples.service.service -DartifactId=cinema -Dversion=LATEST -Dpackaging=war -Dtransitive=false'
-            }
-            
-        }
-        stage('Update snapshot version') {
-            steps {
-              sh  'mvn release:prepare'
+                sh 'mvn release:clean'
             }
         }
-        stage('Upload to release repository') {
-            steps {
-                sh 'mvn clean deploy'
-            }
-        }
-            
         
     
 }
