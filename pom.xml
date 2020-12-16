@@ -4,7 +4,7 @@
 	<artifactId>cinema</artifactId>
 	<version>0.0.9-SNAPSHOT</version>
 	<scm>
-    	<developerConnection>scm:git:https://svn.mycompany.com/repos/myapplication/trunk/mycomponent/</developerConnection>
+    	<developerConnection>scm:git:https://github.com/lctkoning/Online-cinema2.git</developerConnection>
   	</scm>
 
 	<packaging>war</packaging>
