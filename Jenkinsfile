@@ -22,6 +22,7 @@ pipeline {
             }
             steps { 
                 sh 'mvn release:update-versions'
+            }
         }
             
         
