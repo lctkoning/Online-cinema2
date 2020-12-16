@@ -6,7 +6,7 @@ pipeline {
         
         stage('Test clean package') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean install'
             }
         }
         stage('deploy in nexus') {

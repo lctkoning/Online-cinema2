@@ -3,7 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples.service.service</groupId>
 	<artifactId>cinema</artifactId>
+<<<<<<< HEAD
 	<version>0.0.5-SNAPSHOT</version>
+=======
+	<version>0.0.4-SNAPSHOT</version>
+>>>>>>> 00e11a6aa96b70a17585be47cfb1bad1cc9326f9
 	<packaging>war</packaging>
 
 	<properties>
