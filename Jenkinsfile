@@ -32,7 +32,7 @@ pipeline {
                 script {
                 def pom = readMavenPom file: 'pom.xml'
                 def pomVersion = pom.getVersion().replace("-SNAPSHOT", "")
-                sh '${pomVersion}'
+                pomVersion()
                 }
             }
         }
