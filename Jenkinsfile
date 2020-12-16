@@ -11,14 +11,17 @@ pipeline {
         }
         stage('deploy in nexus') {
             steps {
-            script {
-            def pom = readMavenPom file: 'pom.xml'
-            def Nexreponame = pom.version.endsWith("SNAPSHOT") ? "Testrepo" : "Testrepo-REL"
-            echo pom.version
+            sh 'mvn clean deploy'
           
-               nexusArtifactUploader artifacts: [[artifactId: 'cinema', classifier: '',file: "target/cinema-${pom.version}.war", type: 'war']],credentialsId: 'Nexusg', groupId: 'org.springframework.samples.service.service', nexusUrl: '192.168.2.21:8081', nexusVersion: 'nexus3', protocol: 'http', repository: Nexreponame, version: "${pom.version}"
             }
+                
         }
+        stage('Download from snapshot') {
+            steps {
+                sh 'curl -X GET "192.168.2.21:8081:8081/service/rest/v1/search/assets/download?sort=version&repository=maven-snapshots&maven.groupId=org.foo.bar&maven.artifactId=project&maven.baseVersion=1.2.3-SNAPSHOT&maven.extension=jar" -H "accept: application/json"'
+         
+            
+        
     }
 }
 }
