@@ -27,6 +27,14 @@ pipeline {
               sh  'mvn release:update-versions'
             }
         }
+        stage('Transform into release version') {
+            steps {
+                script {
+                def pom = readMavenPom file: 'pom.xml'
+                def pomVersion = pom.getVersion().replace("-SNAPSHOT", "")
+                }
+            }
+        }
             
         
     
