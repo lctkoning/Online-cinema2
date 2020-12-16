@@ -330,6 +330,17 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+    <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://192.168.2.21:8081/repository/Testrepo/</url>
+    </snapshotRepository>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://192.168.2.21:8081/repository/Testrepo-REL/</url>
+    </repository>
+</distributionManagement>
 	 
 
 </project>
