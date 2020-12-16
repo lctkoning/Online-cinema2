@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Download from snapshot') {
             steps {
-                sh 'curl -X GET "http://192.168.2.21:8081:8081/service/rest/v1/search/assets/download?sort=version&repository=maven-snapshots&maven.groupId=org.foo.bar&maven.artifactId=project&maven.baseVersion=1.2.3-SNAPSHOT&maven.extension=war" -H "accept: application/json"'
+                sh 'wget "http://192.168.2.21:8081/repository/Testrepo/service/local/artifact/maven/content?r=snapshots&g=com&a=appp&v=LATEST&p=war" --content-disposition'
             }
         }
             
