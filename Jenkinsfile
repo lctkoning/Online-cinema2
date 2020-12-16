@@ -22,7 +22,7 @@ pipeline {
             }
             
         }
-        stage{'Update snapshot version') {
+        stage('Update snapshot version') {
             steps {
               sh  'mvn release:update-versions'
             }
