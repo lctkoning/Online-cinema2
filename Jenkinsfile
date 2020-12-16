@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Download from snapshot') {
             steps {
-                sh 'wget "http://192.168.2.21:8081/repository/Testrepo/service/local/artifact/maven/content?r=snapshots&g=com&a=appp&v=LATEST&p=war" --content-disposition'
+                sh 'mvn dependency:get -DremoteRepositories=http://192.168.2.21:8081/repository/Testrepo/ -DgroupId=org.foo -DartifactId=project -Dversion=LATEST -Dtransitive=false'
             }
         }
             
