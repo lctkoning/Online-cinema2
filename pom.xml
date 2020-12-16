@@ -3,6 +3,9 @@
 	<groupId>org.springframework.samples.service.service</groupId>
 	<artifactId>cinema</artifactId>
 	<version>0.0.9-SNAPSHOT</version>
+	<scm>
+    	<developerConnection>scm:git:https://svn.mycompany.com/repos/myapplication/trunk/mycomponent/</developerConnection>
+  	</scm>
 
 	<packaging>war</packaging>
 
