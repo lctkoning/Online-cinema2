@@ -22,7 +22,7 @@
             <additionalparam>-Xdoclint:none</additionalparam>
         </properties>
     </profile>
-</profiles>>
+</profiles>
 
 	<properties>
 
