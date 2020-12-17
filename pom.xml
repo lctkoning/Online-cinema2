@@ -44,6 +44,8 @@
 		<joda.time.version>2.2</joda.time.version>
 		<usertype.version>3.0.0.GA</usertype.version>
 
+		<additionalparam>-Xdoclint:none</additionalparam>
+
 	</properties>
 
 	<dependencies>
