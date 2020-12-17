@@ -4,7 +4,7 @@
 	<artifactId>cinema</artifactId>
 	<version>0.0.16-SNAPSHOT</version>
 	<scm>
-		<connection> scm:git:git@github.com:lctkoning/Online-cinema2.git </connection>
+		<connection> scm:git:ssh://:git@github.com:lctkoning/Online-cinema2.git </connection>
     	<developerConnection>scm:git:git@github.com:lctkoning/Online-cinema2.git</developerConnection>
 		<url>https://github.com/lctkoning/Online-cinema2.git</url>
 		<tag>HEAD</tag>
