@@ -2,12 +2,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.samples.service.service</groupId>
 	<artifactId>cinema</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<scm>
 		<connection> scm:git:ssh://:git@github.com:lctkoning/Online-cinema2.git </connection>
     	<developerConnection>scm:git:git@github.com:lctkoning/Online-cinema2.git</developerConnection>
 		<url>https://github.com/lctkoning/Online-cinema2.git</url>
-		<tag>@{project.version}</tag>
+		<tag>cinema-1.0.0</tag>
   	</scm>
 
 	<packaging>war</packaging>
