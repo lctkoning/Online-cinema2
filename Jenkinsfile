@@ -6,7 +6,7 @@ pipeline {
         
         stage('release prepare') {
             steps {
-                sh 'mvn release:prepare'
+                sh 'mvn release:prepare -B'
             }
         }
         stage('release perform') {
