@@ -16,11 +16,6 @@ pipeline {
             }
                 
         }
-        stage('clean up') {
-            steps {
-                sh 'mvn release:clean'
-            }
-        }
         
     
 }
