@@ -387,9 +387,9 @@
 	</build>
 
 	<distributionManagement>
-    <repository>
-  <id>lexkoning</id>
-  <url>https://pkgs.dev.azure.com/lexkoning/_packaging/lexkoning/maven/v1</url>
+  <repository>
+  <id>Maven_artifact_feed</id>
+  <url>https://pkgs.dev.azure.com/lexkoning/00e143cd-d053-4bf3-9c4a-88318be13369/_packaging/Maven_artifact_feed/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
