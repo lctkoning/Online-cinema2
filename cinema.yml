@@ -1,0 +1,13 @@
+trigger:
+- '*'
+
+pool:
+  VMImage: 'ubuntu-18.04'
+
+
+steps:
+ - task: Maven@3
+   displayname: 'Package file using maven'
+   inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'package'
