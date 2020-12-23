@@ -14,7 +14,7 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     mavenAuthenticateFeed: true
-    goals: 'package'
+    goals: 'clean install'
     
 
 - task: Maven@3
