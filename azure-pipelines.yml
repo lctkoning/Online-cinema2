@@ -17,7 +17,7 @@ steps:
     mavenAuthenticateFeed: true
     goals: 'clean package'
     
-steps:
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
