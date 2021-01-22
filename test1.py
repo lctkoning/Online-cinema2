@@ -7,7 +7,14 @@ chrome_options = Options()
 
 chrome_options.add_argument("--headless")
 
-driver = webdriver.Chrome(options=chrome_options)  # Optional argument, if not specified will search path.
+
+chrome_options.binary_location = "/usr/bin/google-chrome"    #chrome binary location specified here
+
+chrome_options.add_argument("--no-sandbox") #bypass OS security model
+chrome_options.add_argument("--disable-dev-shm-usage") #overcome limited resource problems
+
+
+driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver',options=chrome_options)  # Optional argument, if not specified will search path.
 
 start_url = 'http://localhost:8080/cinema/movies/page/1'
 driver.get(start_url)
