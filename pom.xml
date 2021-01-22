@@ -412,7 +412,8 @@
           			<!--suiteXmlFiles>
             			<suiteXmlFile>testng.xml</suiteXmlFile>
           			</suiteXmlFiles-->
-        		</configuration>
+				</includes>
+			</configuration>
       		</plugin>
 			
 		</plugins>
