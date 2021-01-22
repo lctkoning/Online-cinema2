@@ -5,7 +5,8 @@ pipeline {
         
         stage('Selenium test') {
             steps{
-                sh 'python test1.py'
+                sh '#!/bin/sh &&
+                python /home/lexkoning/Online-cinema2/test1.py'
                 }
          }
         stage('Test clean package') {
