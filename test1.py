@@ -8,10 +8,11 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 
 
-chrome_options.binary_location = "/usr/bin/google-chrome"    #chrome binary location specified here
+chrome_options.binary_location = "/opt/google/chrome/chrome"    #chrome binary location specified here
 
 chrome_options.add_argument("--no-sandbox") #bypass OS security model
 chrome_options.add_argument("--disable-dev-shm-usage") #overcome limited resource problems
+chrome_options.add_argument("--disable-gpu")
 
 
 driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver',options=chrome_options)  # Optional argument, if not specified will search path.
