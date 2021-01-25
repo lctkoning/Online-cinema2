@@ -13,7 +13,7 @@ pipeline {
         
         stage('Jmeter') {
             steps {
-            sh 'cd /home/lexkoning/apache-jmeter-5.4/bin/ && sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/lexkoning/Testplans/cinemaa_test.jmx -l /home/lekoning/Testplans/cinemaresult.jtl'
+            sh 'cd /home/lexkoning/apache-jmeter-5.4/bin/ && sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/lexkoning/Testplans/cinema_test.jmx -l /home/lekoning/Testplans/cinemaresult.jtl'
             
             }
         }
