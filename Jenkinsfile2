@@ -18,7 +18,9 @@ pipeline {
             }
         }
         stage('Archive') {
+        steps{
         perfReport '/home/lexkoning/Testplans/Cinema_results.jtl'
+        }
         }
     }
 }
