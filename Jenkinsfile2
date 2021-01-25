@@ -3,10 +3,6 @@ pipeline {
     
     stages {
         
-        stage('Selenium test') {
-            steps{
-                sh '#!/bin/bash && /usr/bin/python3 /home/lexkoning/Online-cinema2/test1.py'
-                }
          }
         stage('Test clean package') {
             steps {
@@ -17,7 +13,7 @@ pipeline {
         
         stage('Jmeter') {
             steps {
-            sh 'cd /home/lexkoning/apache-jmeter-5.4/bin/ && sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/lexkoning/Testplans/cinematest.jmx -l /home/lekoning/Testplans/cinemaresult.jtl'
+            sh 'cd /home/lexkoning/apache-jmeter-5.4/bin/ && sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/lexkoning/Testplans/cinemaa_test.jmx -l /home/lekoning/Testplans/cinemaresult.jtl'
             
             }
         }
