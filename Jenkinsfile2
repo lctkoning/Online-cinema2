@@ -22,6 +22,12 @@ pipeline {
         perfReport '/home/lexkoning/Testplans/Cinema_results.jtl'
         }
         }
+
+        stage('Selenium') {
+        steps{
+        sh '/usr/bin/python3 /home/lexkoning/Online-cinema2/test1.py'
+        }
+        }
     }
 }
 
