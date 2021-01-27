@@ -25,7 +25,7 @@ pipeline {
 
         stage('Selenium') {
         steps{
-        sh '/usr/bin/python3 /home/lexkoning/Online-cinema2/test1.py'
+        sh '/home/lexkoning/.local/bin/pytest -v -s --html=report.html /home/lexkoning/Online-cinema2/testnew2.py'
         }
         }
     }
