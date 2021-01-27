@@ -28,6 +28,11 @@ pipeline {
         sh '/home/lexkoning/.local/bin/pytest -v -s --html=report.html /home/lexkoning/Online-cinema2/testnew2.py'
         }
         }
+        stage('Report Html') {
+        steps{
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: ''])
+        }
+        }
     }
 }
 
